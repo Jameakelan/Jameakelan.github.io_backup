@@ -50,8 +50,8 @@
         </div>
       </div>
 
-      <div class="container">
-        <div class="d-flex navbar-brand">
+      <div class="container-fluid">
+        <div class="d-flex navbar-brand ps-md-4">
           <a class="text-white" href="./login.html">
             <span class="material-icons fs-1"> arrow_back </span>
           </a>
@@ -63,16 +63,36 @@
     <div class="container-fluid">
       <div class="row">
         <!-- Map Info -->
-        <div class="col-12 col-md-5 fs-3 text-white order-2 order-md-1 custom-bg">
+        <div
+          class="
+            col-12 col-md-5
+            ps-md-5
+            fs-3
+            text-white
+            order-2 order-md-1
+            custom-bg
+          "
+        >
           INFO
         </div>
         <!-- End Map Info -->
-        <div class="col-12 col-md-7 fs-3 text-white order-1 order-md-2 custom-bg">
+        <div
+          class="col-12 col-md-7 fs-3 text-white order-1 order-md-2 custom-bg"
+        >
           MAP
         </div>
 
         <!-- Map Info -->
-        <div class="col-12 col-md-5 fs-3 my-md-5 my-2 p-md-4  text-white order-2 order-md-3">
+        <div
+          class="
+            col-12 col-md-5
+            fs-3
+            my-md-3 my-1
+            p-md-4
+            text-white
+            order-2 order-md-3
+          "
+        >
           <!-- Search Button -->
           <form class="m-1">
             <div class="input-group">
@@ -96,75 +116,106 @@
           <!-- End Search Button -->
 
           <!-- Attribute -->
-          <div aria-labelledby="attribute-info" class="fs-3 text-black my-4">
-            Attribute
-          </div>
 
-          <form action="">
-            <div class="form-group row">
-              <div class="my-1">
-                <input
-                  type="text"
-                  class="form-control rounded-0 border-0 border-bottom"
-                  id="title"
-                  placeholder="Title"
-                />
+          <form action="" id="form-attribute">
+            <div id="form-item">
+              <div class="fs-3 text-black my-4" id="attribute-title-0">
+                Attributes
               </div>
-              <div class="my-1">
-                <input
-                  type="text"
-                  class="form-control rounded-0 border-0 border-bottom"
-                  id="sub-title"
-                  placeholder="Sub title"
-                />
-              </div>
-              <div class="my-1">
-                <textarea
-                  type="text"
-                  class="form-control rounded-0 border-0 border-bottom"
-                  id="description"
-                  placeholder="Description"
-                ></textarea>
+              <div class="form-group row">
+                <div class="my-1">
+                  <input
+                    type="text"
+                    class="form-control rounded-0 border-0 border-bottom"
+                    id="title-0"
+                    placeholder="Title"
+                  />
+                </div>
+                <div class="my-1">
+                  <input
+                    type="text"
+                    class="form-control rounded-0 border-0 border-bottom"
+                    id="sub-title-0"
+                    placeholder="Sub title"
+                  />
+                </div>
+                <div class="my-1">
+                  <textarea
+                    type="text"
+                    class="form-control rounded-0 border-0 border-bottom"
+                    id="description-0"
+                    placeholder="Description"
+                  ></textarea>
+                </div>
               </div>
             </div>
-
             <div
+              id="add-new-atrribute"
               class="
                 my-3
                 fs-6
                 fw-light
+                d-inline-flex
                 text-black
                 d-flex
+                add-new-attribute
                 justify-content-end justify-content-md-start
               "
+              onclick="addNewAttribute()"
             >
               <div>Add new Attribute</div>
               <span class="material-icons text-success ps-1"> add_circle </span>
-            </div>
-
-            <div class="m-4 d-flex justify-content-center">
-              <button
-                type="submit"
-                class="px-4 custom-btn text-white rounded-pill"
-              >
-                Save
-              </button>
             </div>
           </form>
           <!-- End Attribute -->
         </div>
         <!-- End Map Info -->
-        <div class="col-12 col-md-7 fs-3 my-md-5 my-2 p-md-4 text-white order-1 order-md-4">
-          <div class="container bg-success">
+        <div
+          class="
+            col-12 col-md-7
+            fs-3
+            my-md-3 my-2
+            py-md-4 p-0
+            text-white
+            order-1 order-md-4
+          "
+        >
+          <div class="container-fluid">
             <div class="row">
-              <div class="col text-black bg-success" style="height: 68px">
-                Jame
-              </div>
+              <div class="col text-black bg-danger container-map"> Map Here </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Save and Publish Button -->
+    <div class="container-fluid mb-3">
+      <div class="row">
+        <div class="col">
+          <div class="ps-md-5 d-flex justify-content-start">
+            <button
+              form="form-attribute"
+              type="submit"
+              class="px-4 custom-btn text-white rounded-pill"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex justify-content-end">
+            <button
+              type="submit"
+              class="px-4 custom-btn text-white rounded-pill"
+            >
+              Publish
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Save and Publish Button -->
 
     <!-- Map and Info Content -->
     <!-- End Map and Info Content -->
@@ -177,6 +228,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
